@@ -61,6 +61,14 @@ def search(search):
     pyau.write(search)
     pyau.press('enter')
 
+def search_wb(gosearch):
+    open_browser()
+    newtab()
+    pyau.moveTo(x=943, y=543)
+    ti.sleep(0.5)
+    pyau.write(gosearch)    
+    pyau.press('enter')                               
+
 def youtube():
     open_browser()
     newtab()
@@ -83,7 +91,8 @@ while GIRunTime == True:
     print('5. open_browser')
     print('6. Guess a number')
     print('7. YT')
-    print('Search == Search on the destop env')
+    print('search == Search on the destop env')
+    print('search-wb == use chrome to search')
     print('bye == stops the programe')
     print('make your choice!!!!!')
 
@@ -106,7 +115,11 @@ while GIRunTime == True:
         print('what you search for')
         searche = input()
         search(searche)
+    elif user_input == 'search-wb':
+        print('ask me what you will i ask googel')
+        searche_wb = input()    
+        search_wb(searche_wb)
     elif user_input == 'bye':
         break
 
-print('bye')
+print('Goodbye master')
