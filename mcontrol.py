@@ -58,7 +58,9 @@ def newtab():
 
 def search(search):
     pyau.press('win')
+    ti.sleep(0.5)
     pyau.write(search)
+    ti.sleep(0.5)
     pyau.press('enter')
 
 def search_wb(gosearch):
@@ -83,6 +85,9 @@ def spotify():
     pyau.write('open.spotify.com')
     pyau.press('enter')
 
+def open_multimc():
+    search('multimc')
+
 while GIRunTime == True:
     print('1. VS_Code')
     print('2. Discord')
@@ -91,6 +96,7 @@ while GIRunTime == True:
     print('5. open_browser')
     print('6. Guess a number')
     print('7. YT')
+    print('8. Multimc')
     print('search == Search on the destop env')
     print('search-wb == use chrome to search')
     print('bye == stops the programe')
@@ -111,6 +117,8 @@ while GIRunTime == True:
         num_gussing()
     elif user_input == '7':
         youtube()
+    elif user_input == '8':
+        open_multimc()
     elif user_input == 'search':
         print('what you search for')
         searche = input()
